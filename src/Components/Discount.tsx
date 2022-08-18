@@ -16,12 +16,18 @@ export function Discount() {
     return (
       <Card border="light" text="danger">
         <Card.Body>
-          <Card.Text>
+          <Card.Text style={{ textAlign: "right", fontSize: "1rem" }}>
             {currentPromotions.map(function (currentPromotion) {
               return <CurrentDiscount discountName={currentPromotion} />;
             })}
           </Card.Text>
-          <Card.Text style={{ textAlign: "right", fontSize: "1.2rem" }}>
+          <Card.Text
+            style={{
+              textAlign: "right",
+              fontSize: "1.2rem",
+              fontWeight: "bold",
+            }}
+          >
             {" "}
             Total Discount: -{currencyFormatter(
               getTotalDiscount(basketItems)

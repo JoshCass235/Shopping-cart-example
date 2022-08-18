@@ -22,6 +22,17 @@ export function Basket({ isOpen }: BasketProps) {
           {basketItems.map((item) => (
             <BasketItem key={item.id} {...item} />
           ))}
+          <div className="ms-auto fw-bold fs-5">
+            Subtotal{" "}
+            {currencyFormatter(
+              basketItems.reduce((total, basketItem) => {
+                const item = products.find((item) => item.id === basketItem.id);
+                const totalBeforeDiscount =
+                  total + (item?.price || 0) * basketItem.quantity;
+                return totalBeforeDiscount;
+              }, 0)
+            )}
+          </div>
           <Discount />
           <div className="ms-auto fw-bold fs-4">
             Total{" "}

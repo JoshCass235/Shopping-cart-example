@@ -14,7 +14,7 @@ export function Navigation() {
         </Nav>
         <Button
           onClick={toggleBasket}
-          style={{ width: "42px", height: "42px", position: "relative" }} //change to rem
+          style={{ width: "3rem", height: "3rem", position: "relative" }}
           variant="success"
         >
           <svg
