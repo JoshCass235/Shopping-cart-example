@@ -37,7 +37,7 @@ export function Product({ id, name, price, imgUrl }: ProductProps) {
           ) : (
             <div
               className="d-flex align-items-center flex-column"
-              style={{ gap: "5px" }} //change to rem?
+              style={{ gap: "5px" }}
             >
               <div
                 className="d-flex align-items-center justify-content-center"

@@ -8,11 +8,10 @@ import { Store } from "./pages/Store";
 import { About } from "./pages/About";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { Navigation } from "./Components/Navigation";
-import { BasketProvider } from "./context/BasketContext"; //context
+import { BasketProvider } from "./context/BasketContext";
 import { Deals } from "./pages/Deals";
 
 function App() {
-  //could change className
   return (
     <BrowserRouter>
       <BasketProvider>
